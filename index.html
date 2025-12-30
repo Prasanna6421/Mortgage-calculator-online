@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🏠💸Mortgage calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="calculator-card">
+        <section class="form-section">
+          <div class="header">
+            <h2>Mortgage Calculator</h2>
+            <button class="clear-btn" id="clear-btn">clear-all</button>
+          </div>
+
+          <div class="feild">
+            <label for="mortage-amount">Mortage Amount</label>
+            <div class="input-box">
+              <span class="prefix">₹</span>
+              <input type="number" id="amount" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="feild">
+              <label for="year">Mortage Term</label>
+              <div class="input-box">
+                <input type="number" id="term" />
+                <span class="suffix">years</span>
+              </div>
+            </div>
+
+            <div class="feild">
+              <label for="Interest-rate">Interest Rate</label>
+              <div class="input-box">
+                <input type="number" id="rate" />
+                <span class="suffix">%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feild">
+            <label for="Mortage-type">Mortage-Type</label>
+            <label class="radio-card">
+              <input type="radio" name="type" value="repayments" checked />
+              <span class="prefix">Repayment</span>
+            </label>
+
+            <label class="radio-card">
+              <input type="radio" name="type" value="Intrest-only" />
+              <span class="prefix">Intrest only</span>
+            </label>
+          </div>
+
+          <button class="calculate-btn" id="calculate-btn">Calculate</button>
+        </section>
+
+        <section class="result-section">
+          <div class="result-content" id="empty-state">
+            <h2>Results shown here</h2>
+            <p>
+              Complete the form and click "calculate repayments" to see what
+              your monthly repayments would be
+            </p>
+            <img src="./image/illustration-empty.svg" alt="" />
+          </div>
+
+          <div id="result" class="result hidden"></div>
+          <div id="result-yearly" class="result-yearly hidden"></div>
+        </section>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
